@@ -1,4 +1,4 @@
-package org.example;
+package org.example.service.key;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -9,8 +9,8 @@ import okhttp3.Response;
 import java.io.IOException;
 import java.time.Duration;
 
-public class ParticipationKeyFetcher {
-    public static String fetchParticipationKey(String slideDeckId) throws IOException {
+public class ParticipationKeyService {
+    public String fetchKey(String slideDeckId) throws IOException {
         String url = "https://www.menti.com/core/audience/slide-deck/"
                 + slideDeckId + "/participation-key";
         OkHttpClient client = new OkHttpClient.Builder()
